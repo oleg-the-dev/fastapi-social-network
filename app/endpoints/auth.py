@@ -27,6 +27,6 @@ def login(
 
 @router.get("/whoami", response_model=UserDB)
 def whoami(
-    current_user: User = Depends(get_current_user)
+        current_user: User = Depends(get_current_user)
 ) -> User:
     return current_user
